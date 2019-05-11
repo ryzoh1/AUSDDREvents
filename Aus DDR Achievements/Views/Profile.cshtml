@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Profile>
+@{
+    Layout = "Master.cshtml";
+
+    var username = Request.QueryString["user"];
+    var member = Members.GetByUsername(username);
+}
+
+<section class="py-5">
+    <div class="container">
+
+        <img src=""/>
+
+        <h1>@member.GetProperty("DDRName").Value()</h1>
+
+        <h1>@member.GetProperty("rivalCode").Value()</h1>
+
+    </div>
+</section>

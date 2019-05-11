@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Season>
+@{
+    Layout = "Master.cshtml";
+}
+
+<header class="py-5 bg-image-full" style="background-image: url('@(Model.Background1?.Url)');">
+    <img class="img-fluid d-block mx-auto" src="@(Model.Logo?.Url)" alt="" style="height:300px">
+</header>
+
+<section class="py-5">
+    <div class="container">
+        <h1>@Model.Heading</h1>
+        @*<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>*@
+        @Model.Description
+    </div>
+</section>
+
+<section class="py-5 bg-image-full" style="background-image: url('@(Model.Background2?.Url)');">
+    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+
+    <div style="height: 85px;"></div>
+
+    <div class="container">
+
+        <h1 id="white-text">Coming June 2019</h1>
+
+    </div>
+
+    <div style="height: 115px;"></div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        @*<h1>Section Heading</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>*@
+        @Model.Description2
+    </div>
+</section>
